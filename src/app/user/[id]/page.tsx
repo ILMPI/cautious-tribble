@@ -12,7 +12,17 @@ import {
 
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { PhoneNumber } from '@/components/PhoneNumber'
-export default async function UserPage({ params }: { params: { id: string } }) {
+
+type PageProps = {
+  params: {
+    id: string;
+  };
+};
+
+
+
+export default async function UserPage({ params }: PageProps){
+  const userId = Number(params.id);
   let user: User | null = null
 
   try {
@@ -23,6 +33,8 @@ export default async function UserPage({ params }: { params: { id: string } }) {
     return notFound()
 
   }
+
+  if (isNaN(userId)) return notFound();
 
   const googleMapUrl = `https://maps.google.com/?q=${user.address.geo.lat},${user.address.geo.lng}`
 
