@@ -19,23 +19,19 @@ type PageProps = {
   };
 };
 
-
-
-export default async function UserPage({ params }: PageProps){
+export default async function UserPage({ params }: PageProps) {
   const userId = Number(params.id);
-  let user: User | null = null
-
-  try {
-    user = await fetchUserById(Number(params.id))
-    if (!user || !user.id) return notFound()
-  } catch (err) {
-    console.error('Failed to fetch user:', err)
-    return notFound()
-
-  }
-
   if (isNaN(userId)) return notFound();
 
+  let user: User | null = null;
+
+  try {
+    user = await fetchUserById(userId);
+    if (!user || !user.id) return notFound();
+  } catch (err) {
+    console.error('Failed to fetch user:', err);
+    return notFound();
+  }
   const googleMapUrl = `https://maps.google.com/?q=${user.address.geo.lat},${user.address.geo.lng}`
 
   return (
