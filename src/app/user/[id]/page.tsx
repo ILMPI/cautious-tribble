@@ -32,6 +32,7 @@ export default async function UserPage({ params }: PageProps) {
     console.error('Failed to fetch user:', err);
     return notFound();
   }
+  
   const googleMapUrl = `https://maps.google.com/?q=${user.address.geo.lat},${user.address.geo.lng}`
 
   return (
