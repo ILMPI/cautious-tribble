@@ -11,7 +11,7 @@ export default function NotFound() {
         <AlertTriangle className="w-10 h-10 text-destructive" />
         <h1 className="text-3xl font-bold">Page Not Found</h1>
         <p className="text-muted-foreground text-lg max-w-md">
-          The page you were looking for doesn't exist.
+          The page you were looking for doesn&apos;t exist.
         </p>
         <Link href="/">
           <Button variant="outline">← Go Home</Button>
