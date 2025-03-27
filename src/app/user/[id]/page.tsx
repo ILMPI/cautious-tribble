@@ -13,17 +13,18 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { PhoneNumber } from '@/components/PhoneNumber'
 
-type PageProps = {
-  params: {
-    id: string;
-  };
+type UserPageProps = {
+  params: Promise<{ id: string }>;
 };
 
-export default async function UserPage({ params }: PageProps) {
-  const userId = Number(params.id);
+export default async function UserPage({ params }: UserPageProps) {
+  const { id } = await params;
+  const userId = Number(id);
+
   if (isNaN(userId)) return notFound();
 
   let user: User | null = null;
+
 
   try {
     user = await fetchUserById(userId);
@@ -32,7 +33,7 @@ export default async function UserPage({ params }: PageProps) {
     console.error('Failed to fetch user:', err);
     return notFound();
   }
-  
+
   const googleMapUrl = `https://maps.google.com/?q=${user.address.geo.lat},${user.address.geo.lng}`
 
   return (
