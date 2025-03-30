@@ -21,8 +21,9 @@ Minimal web application which is showing list of users from [JSONPlaceholder](ht
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
+- [shadcn/ui](https://ui.shadcn.com/)
 - [Lucide Icons](https://lucide.dev/)
-- [Sonner Toaster](https://sonner.emilkowal.dev/)
+- [Sonner Toaster](https://sonner.emilkowal.ski/)
 
 ## 📦 Installation
 
