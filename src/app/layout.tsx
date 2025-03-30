@@ -8,7 +8,7 @@ import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   title: "User View",
-  description: "user view application",
+  description: "user view application"
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="">
       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Header />

@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { AlertTriangle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -19,4 +17,3 @@ export default function NotFound() {
       </main>
     )
   }
-  

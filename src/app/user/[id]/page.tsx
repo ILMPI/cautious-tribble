@@ -61,23 +61,23 @@ export default async function UserPage({ params }: UserPageProps) {
           </Card>
 
           <Card className="order-2 p-6 text-m flex flex-col gap-2">
-            <p className="flex items-center gap-2 group">
+            <div className="flex items-center gap-2 group">
               {/* <Phone className="w-4 h-4" /> */}
               <span><PhoneNumber phone={user.phone ?? '—'} /></span>
               <CopyButton
                 text={user.phone ?? ''}
                 className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               />
-            </p>
-            <p className="flex items-center gap-2 group">
+            </div>
+            <div className="flex items-center gap-2 group">
               <Mail className="w-4 h-4" />
               <span>{user.email ?? '—'}</span>
               <CopyButton
                 text={user.email ?? ''}
                 className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
               />
-            </p>
-            <p className="flex items-center gap-2">
+            </div>
+            <div className="flex items-center gap-2">
               <Globe className="w-4 h-4" />
               <a
                 href={`https://${user.website}`}
@@ -86,7 +86,7 @@ export default async function UserPage({ params }: UserPageProps) {
               >
                 {user.website}
               </a>
-            </p>
+            </div>
           </Card>
         </div>
 
@@ -112,7 +112,13 @@ export default async function UserPage({ params }: UserPageProps) {
             )}
           </Card>
 
-          <Card className="order-3 sm:order-4 p-6 text-base flex-0 items-center justify-center cursor-pointer hover:bg-accent transition-colors">
+          <Card className="
+            order-3 sm:order-4 p-6 
+            text-base flex-0
+            items-start justify-start
+            lg:items-center lg:justify-center
+            cursor-pointer hover:bg-accent 
+            transition-colors">
             <a
               href={googleMapUrl}
               target="_blank"

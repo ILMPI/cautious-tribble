@@ -7,7 +7,7 @@ export default function UserDetailsSkeleton() {
   return (
     <main className="max-w-[700px] mx-auto px-4 py-8 space-y-6">
       <div className="flex flex-col sm:flex-row gap-6 bg-muted/50 p-4 rounded-xl">
-        {/* LEFT COLUMN */}
+
         <div className="flex flex-col gap-4 flex-1">
           <Card className="p-6 flex flex-col items-center justify-center text-center space-y-4">
             <SkeletonShimmer className="w-40 h-40 rounded-full" />
@@ -24,7 +24,7 @@ export default function UserDetailsSkeleton() {
           </Card>
         </div>
 
-        {/* RIGHT COLUMN */}
+
         <div className="flex flex-col gap-4 flex-1">
           <Card className="p-6 space-y-4 flex-1">
             <SkeletonShimmer className="h-5 w-3/4" />
