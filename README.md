@@ -28,8 +28,8 @@ Minimal web application which is showing list of users from [JSONPlaceholder]
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/yourusername/user-view
-cd user-view
+git clone https://github.com/ILMPI/cautious-tribble.git
+cd cautious-tribble
 npm install
 npm run dev
 ```
