@@ -1,7 +1,6 @@
 # 🧑‍💼 Users View
 
-Minimal web application which is showing list of users from [JSONPlaceholder]
-(https://jsonplaceholder.typicode.com/users) and their detailed information, providing simple search.
+Minimal web application which is showing list of users from [JSONPlaceholder](https://jsonplaceholder.typicode.com/users) and their detailed information, providing simple search.
 
 ## ✨ Features
 
